@@ -8,6 +8,7 @@ function App() {
 
   const [word, setWord] = useState("")
   const [meanings, setMeanings] = useState([])
+  const [category, setCategory] = useState("en")
 
   const dictionaryApi = async() => {
     try {
@@ -29,7 +30,9 @@ useEffect(() => {
     <div className="App"
     style={{height: '100vh', backgroundColor: '#666', color: '#fff'}}>
       <Container maxWidth="md"
-      style={{display:'flex', flexDirection:'column', height:'100vh'}}> <Header></Header> </Container>
+      style={{display:'flex', flexDirection:'column', height:'100vh'}}> 
+        <Header category={category} setCategory={setCategory}/> 
+      </Container>
     </div>
   );
 };

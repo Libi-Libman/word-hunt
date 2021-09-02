@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import axios from 'axios';
 import './App.css';
+import {Container} from '@material-ui/core';
 
 function App() {
 
@@ -24,7 +25,10 @@ useEffect(() => {
   dictionaryApi()
 }, [])
   return (
-    <div className="App">dictionary
+    <div className="App"
+    style={{height: '100vh', backgroundColor: '#666', color: '#fff'}}>
+      <Container maxWidth="md"
+      style={{display:'flex', flexDirection:'column', height:'100vh', backgroundColor:'#ccc'}}> Dictionary </Container>
     </div>
   );
 };
